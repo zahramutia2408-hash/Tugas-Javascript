@@ -166,15 +166,10 @@ function HITUNG_TOTAL_POIN(p1, p2, p3) {
 // dan mengembalikan (return) string nama tier beserta keterangannya.
 
 function TENTUKAN_TIER_MEMBER(poin) {
-    if (poin >= 100) {
-        return "Platinum";
-    } else if (poin >= 70) {
-        return "Gold";
-    } else if (poin >= 40) {
-        return "Silver";
-    } else {
-        return "Bronze";
-    }
+    if (poin >= 100) return "Platinum";
+    if (poin >= 70) return "Gold";
+    if (poin >= 40) return "Silver";
+    return "Bronze";
 }
 
 
@@ -207,13 +202,23 @@ console.log("Tier Member :", TIER_PELANGGAN_C);
 // TODO 6A:
 // Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
 
-
-
+let MENU_REKOMENDASI = [
+    "Caramel Macchiato",
+    "Kopi Susu Gula Aren",
+    "Croissant Butter Keju",
+    "Matcha Cream Latte",
+    "Cinnamon Roll Hangat"
+];
 
 // TODO 6B:
 // Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
 // "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
 
+console.log("=== MENU REKOMENDASI UNTUK MEMBER ===");
+
+for (let i = 0; i < MENU_REKOMENDASI.length; i++) {
+    console.log((i + 1) + ". " + MENU_REKOMENDASI[i]);
+};
 
 
 
@@ -221,3 +226,6 @@ console.log("Tier Member :", TIER_PELANGGAN_C);
 // Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
 
+console.log("Total Menu Favorit: " + MENU_REKOMENDASI.length + " menu");
+
+console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
