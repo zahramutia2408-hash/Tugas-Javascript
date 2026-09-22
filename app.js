@@ -27,8 +27,7 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
 
-
-
+console.log("Skrip app.js berhasil terhubung!");
 
 // ============================================================
 // AKTIVITAS 2: Variabel & Dialog Interaktif
@@ -40,16 +39,23 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
+const NAMA_KEDAI = "Kopi PSTI Kampus";
 
+let NAMA_KASIR = "Kak Eko";
+let SHIFT_KERJA = "Pagi"
 
+console.log("Nama kedai:", NAMA_KEDAI);
+console.log("Nama kasir awal:", NAMA_KASIR);
+console.log("Shift Kerja : ", SHIFT_KERJA);
 
 // ---- DEMO PERBEDAAN LET vs CONST ----
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
 
+NAMA_KASIR = "Kak Zahra";
 
-
+console.log("Nama Kasir setelah diubah:", NAMA_KASIR);
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
 // TODO 2C:
@@ -59,7 +65,17 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
 
+alert("Selamat datang di Kopi PSTI Kampus!");
 
+let NAMA_PELANGGAN = prompt("Masukkan nama pelanggan:");
+
+if (NAMA_PELANGGAN) {
+    alert("Halo, " + NAMA_PELANGGAN + "! Selamat datang di " + NAMA_KEDAI + ".");
+    console.log("Nama pelanggan :", NAMA_PELANGGAN);
+} else {
+    NAMA_PELANGGAN = "Pelanggan Setia";
+    alert("Nama tidak diisi. Selamat datang, Pelanggan Setia!");
+}
 
 
 // ============================================================
@@ -73,6 +89,17 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
 
+let POIN_KOPI = 45;
+let POIN_MAKANAN = 35;
+let POIN_MERCHANDISE = 20;
+
+let TOTAL_POIN = POIN_KOPI + POIN_MAKANAN + POIN_MERCHANDISE;
+
+console.log("=== RINCIAN POIN: " + NAMA_PELANGGAN + " ===");
+console.log("Poin Kopi        :", POIN_KOPI);
+console.log("Poin Makanan     :", POIN_MAKANAN);
+console.log("Poin Merchandise :", POIN_MERCHANDISE);
+console.log("Total Poin       :", TOTAL_POIN);
 
 
 
